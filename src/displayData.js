@@ -4,7 +4,7 @@ export default function Display({ data }) {
       {data.map((house) => (
         <div
           key={house.id}
-          className="flex-grow h-96 shadow-md mb-5 rounded-md overflow-hidden"
+          className="flex-grow w-96 h-96 shadow-md mb-5 rounded-md overflow-hidden"
         >
           <img className="w-full h-2/3" src={house.image} alt={house.name} />
           <div className="px-4">
@@ -14,9 +14,7 @@ export default function Display({ data }) {
               </span>
               /<span className="text-gray-600">month</span>
             </h3>
-            <h3 className="text-xl font-bold py-1">
-              House-{house.name} {/*- {house.price}*/}
-            </h3>
+            <h3 className="text-xl font-bold py-1">House-{house.name}</h3>
             <p>{house.location}</p>
           </div>
         </div>
