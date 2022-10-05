@@ -11,7 +11,7 @@ export default function FilterMenu({
   searchQuery,
 }) {
   return (
-    <ul className="hidden space-x-8 lg:flex lg:justify-between">
+    <ul className="hidden space-x-8 lg:flex lg:justify-between items-center">
       <li>
         <div>
           <div className="text-gray-500 text-sm">Location</div>
