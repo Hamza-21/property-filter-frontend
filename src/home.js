@@ -61,6 +61,13 @@ export default function Home() {
           newData = newData.filter((item) =>
             isPriceValid(item[key], searchQuery[key])
           );
+        } else if (key === "postedAt") {
+          newData = newData.filter((item) => {
+            const searchedData = new Date(searchQuery[key])
+              .toLocaleString("en-GB")
+              .split(",")[0];
+            return item[key].includes(searchedData);
+          });
         } else {
           newData = newData.filter((item) => item[key] === searchQuery[key]);
         }
