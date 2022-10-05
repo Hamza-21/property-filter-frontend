@@ -20,7 +20,11 @@ export default function Home() {
   };
 
   const handleDateChange = (e) => {
-    setSearchQuery({ ...searchQuery, postedAt: e.target.value });
+    if (e.target.value.trim()) {
+      setSearchQuery({ ...searchQuery, postedAt: e.target.value });
+    } else {
+      setSearchQuery({ ...searchQuery, postedAt: null });
+    }
   };
 
   const handleReset = () => {
