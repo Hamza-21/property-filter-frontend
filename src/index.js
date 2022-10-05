@@ -1,14 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./App.css";
-
-function Home() {
-  return (
-    <div>
-      <h1>Hello World!</h1>
-    </div>
-  );
-}
+import Home from "./home";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<Home />);
